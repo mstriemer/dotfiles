@@ -8,7 +8,9 @@ set ruler
 syntax on
 color solarized
 set background=dark
-set gfn=Monaco:h14
+if has("mac")
+  set gfn=Monaco:h14
+end
 
 " Set encoding
 set encoding=utf-8

@@ -1,3 +1,3 @@
 bundle/*
 backup/*
-!bundle/vundle
+!backup/.gitkeep
