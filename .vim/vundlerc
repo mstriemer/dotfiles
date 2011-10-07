@@ -1,0 +1,57 @@
+set nocompatible               " be iMproved
+filetype off
+let mapleader = ','
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'ervandew/supertab'
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+" Bundle 'rails.vim'
+" non github repos
+" ...
+
+filetype plugin indent on     " required! 
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+
+" Command-T configuration
+Bundle 'git://git.wincent.com/command-t.git'
+let g:CommandTMaxHeight=20
+map <D-t> :CommandT<CR>
+imap <D-t> <Esc>:CommandT<CR>
+nnoremap <Leader>t :CommandT<CR>
+
+" Enable syntastic syntax checking
+Bundle 'scrooloose/syntastic'
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_warnings=1
+
+Bundle 'tlib'
+Bundle 'tComment'
+nnoremap // :TComment<CR>
+vnoremap // :TComment<CR>
+nnoremap <D-/> :TComment<CR>
+vnoremap <D-/> :TComment<CR>
+
+Bundle 'Lokaltog/vim-easymotion'
+let g:EasyMotion_leader_key='<leader>m'

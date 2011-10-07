@@ -1,0 +1,5 @@
+if has("gui_running")
+  set relativenumber
+else
+  set number
+endif

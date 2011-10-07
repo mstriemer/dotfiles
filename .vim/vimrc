@@ -1,0 +1,81 @@
+" Hack my crummy console vim
+if has("gui_running")
+  set relativenumber
+else
+  set number
+endif
+set ruler
+syntax on
+color solarized
+set background=dark
+set gfn=Monaco:h14
+
+" Set encoding
+set encoding=utf-8
+
+" Whitespace stuff
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set autoindent
+set smarttab
+set copyindent
+set pastetoggle=<F2> " Disable auto-indenting magic for pasting
+set shiftround
+set list listchars=tab:··,trail:·
+
+" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Tab completion
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+
+" Status bar
+set laststatus=2
+
+" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+
+" add json syntax highlighting
+au BufNewFile,BufRead *.json set ft=javascript
+
+set backspace=indent,eol,start " allow backspacing over everything in insert mode
+set clipboard+=unnamed         " Yanks go on clipboard instead.
+set autoread
+
+" Directories for swp files
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
+
+" Show (partial) command in the status line
+set showcmd
+
+imap <C-l> <Space>=><Space>
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+" Allow ;<cmd> isntead of :<cmd>
+nnoremap ; :
+" Clear search
+nmap <silent> <leader>/ :nohlsearch<CR>
+" Allow :w!! to sudo save
+cmap w!! w !sudo tee % >/dev/null
+" Vimrc management
+nnoremap <leader>rs :source ~/.vimrc<CR>
+nnoremap <leader>rt :tabnew ~/.vim/vimrc<CR>
+nnoremap <leader>re :e ~/.vim/vimrc<CR>
+nnoremap <leader>rd :e ~/.vim/ <CR>
+
+" Tabs
+nnoremap <M-h> :tabprev<CR>
+nnoremap <M-l> :tabnext<CR>
+" Esc
+inoremap <leader>, <Esc>
+inoremap ;; <Esc>
