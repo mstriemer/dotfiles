@@ -3,12 +3,12 @@ from __future__ import print_function
 import os
 import argparse
 
-modules = (
+all_modules = (
     'vim',
     'git',
 )
 
-def setup():
+def setup(modules):
     for module in modules:
         print('setting up {0}'.format(module))
         m = __import__(module)
@@ -30,4 +30,9 @@ if __name__ == '__main__':
         print("Mode must be one of {0}.".format(', '.join(valid_modes)))
     elif args.mode in ('install', 'uninstall') and len(args.modules) == 0:
         print("You must specify something to {0}.".format(args.mode))
-    # setup()
+    if args.modules == 'all':
+      setup(all_modules)
+    elif all(m in all_modules for m in args.modules):
+      setup(args.modules)
+    else:
+      print("Available modules are {0}".format(', '.join(all_modules)))
