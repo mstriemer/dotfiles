@@ -1,6 +1,7 @@
 set nocompatible               " be iMproved
 filetype off
 let mapleader = ','
+let maplocalleader = '\'
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -38,8 +39,6 @@ filetype plugin indent on     " required!
 " Command-T configuration
 Bundle 'git://git.wincent.com/command-t.git'
 let g:CommandTMaxHeight=20
-map <D-t> :CommandT<CR>
-imap <D-t> <Esc>:CommandT<CR>
 nnoremap <Leader>t :CommandT<CR>
 
 " Enable syntastic syntax checking
@@ -55,4 +54,4 @@ nnoremap <D-/> :TComment<CR>
 vnoremap <D-/> :TComment<CR>
 
 Bundle 'Lokaltog/vim-easymotion'
-let g:EasyMotion_leader_key='<leader>m'
+let g:EasyMotion_leader_key='<localleader>'

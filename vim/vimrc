@@ -6,7 +6,7 @@ else
 endif
 set ruler
 syntax on
-color solarized
+colorscheme solarized
 set background=dark
 if has("mac")
   set gfn=Monaco:h14
@@ -26,7 +26,7 @@ set smarttab
 set copyindent
 set pastetoggle=<F2> " Disable auto-indenting magic for pasting
 set shiftround
-set list listchars=tab:··,trail:·
+set list listchars=tab:→\ ,trail:·
 
 " Searching
 set hlsearch
@@ -40,6 +40,17 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " Status bar
 set laststatus=2
+
+if has("gui_running")
+  if has('mac')
+    " set fullscreen
+    set fuoptions=maxvert,maxhorz ",background:#00AAaaaa
+  endif
+endif
+
+" Highlight the current line
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
