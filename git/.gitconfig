@@ -23,4 +23,4 @@
     untracked = cyan
 [core]
     excludesfile = /Users/Mark/.gitignore
-	editor = /usr/bin/vim
+    editor = /usr/bin/vim

@@ -6,6 +6,7 @@ import argparse
 all_modules = (
     'vim',
     'git',
+    'hg',
 )
 
 def setup(modules):
