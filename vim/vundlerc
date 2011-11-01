@@ -40,6 +40,8 @@ filetype plugin indent on     " required!
 Bundle 'git://git.wincent.com/command-t.git'
 let g:CommandTMaxHeight=20
 nnoremap <Leader>t :CommandT<CR>
+" Flush CommandT when coming back to vim or writing a file
+au FocusGained,BufWrite * CommandTFlush
 
 " Enable syntastic syntax checking
 Bundle 'scrooloose/syntastic'
