@@ -17,9 +17,9 @@ set encoding=utf-8
 
 " Whitespace stuff
 set nowrap
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set autoindent
 set smarttab
@@ -54,6 +54,9 @@ autocmd WinLeave * setlocal nocursorline
 
 " vundlerc is a vim file
 au BufRead,BufNewFile vundlerc set ft=vim
+
+" Set less filetype
+au BufNewFile,BufRead *.less set filetype=less
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby

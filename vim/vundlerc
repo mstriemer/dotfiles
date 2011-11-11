@@ -18,6 +18,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'lunaru/vim-less'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
