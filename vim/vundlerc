@@ -58,3 +58,6 @@ vnoremap <D-/> :TComment<CR>
 
 Bundle 'Lokaltog/vim-easymotion'
 let g:EasyMotion_leader_key='<localleader>'
+
+Bundle 'Lokaltog/vim-powerline'
+let g:Powerline_symbols='fancy'

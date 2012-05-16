@@ -1,9 +1,4 @@
-" Hack my crummy console vim
-if has("gui_running")
-  set relativenumber
-else
-  set number
-endif
+set relativenumber
 set ruler
 syntax on
 colorscheme solarized
@@ -11,6 +6,7 @@ set background=dark
 if has("mac")
   set gfn=Monaco:h14
 end
+set t_Co=256 " Explicitly tell vim that the terminal supports 256 colours
 
 " Set encoding
 set encoding=utf-8
@@ -65,8 +61,11 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=r
 au BufNewFile,BufRead *.json set ft=javascript
 
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set clipboard+=unnamed         " Yanks go on clipboard instead.
 set autoread
+
+" Yank to the OS X clipboard
+noremap <leader>y "*y
+noremap <leader>yy "*Y
 
 " Directories for swp files
 set backupdir=~/.vim/backup
@@ -80,8 +79,7 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
-" Allow ;<cmd> isntead of :<cmd>
-nnoremap ; :
+
 " Clear search
 nmap <silent> <leader>/ :nohlsearch<CR>
 " Allow :w!! to sudo save
