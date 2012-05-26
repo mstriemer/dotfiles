@@ -32,7 +32,7 @@ set smartcase
 
 " Tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc,env-*/*,*.jpg,*.jpeg,*.gif,*.png,*.zip
 
 " Status bar
 set laststatus=2
@@ -47,6 +47,9 @@ endif
 " Highlight the current line
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
+
+" Set HTML as HTML-Django
+au BufRead,BufNewFile *.html set ft=htmldjango
 
 " vundlerc is a vim file
 au BufRead,BufNewFile vundlerc set ft=vim
