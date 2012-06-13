@@ -23,6 +23,7 @@ Bundle 'juvenn/mustache.vim'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'tpope/vim-surround'
 " Bundle 'rails.vim'
 " non github repos
 " ...
