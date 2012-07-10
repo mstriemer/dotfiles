@@ -1,3 +1,5 @@
+set shell=bash
+set colorcolumn=80,100
 set relativenumber
 set ruler
 syntax on

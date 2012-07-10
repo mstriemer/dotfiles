@@ -33,9 +33,6 @@ plugins=(git github rails rails3 vi-mode brew rvm bundler)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
 export PATH=/usr/local/bin:$PATH
 
 set -o vi
@@ -45,3 +42,10 @@ if [ -f `brew --prefix`/etc/autojump ]; then
 fi
 
 . ~/.dotfiles/zsh/aliases.zsh
+
+if [[ -a ~/.dotfiles/zsh/local.zsh ]]; then
+  . ~/.dotfiles/zsh/local.zsh
+fi
+
+# Customize to your needs...
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
