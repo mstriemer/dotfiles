@@ -1,3 +1,5 @@
+[include]
+    path = .dotfiles/git/.gitconfig.local
 [user]
     name = Mark Striemer
     email = mstriemer@gmail.com

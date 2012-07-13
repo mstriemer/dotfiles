@@ -1,3 +1,4 @@
 *.pyc
 vim/vimrc.local
 zsh/local.zsh
+git/.gitconfig.local
