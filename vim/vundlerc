@@ -62,3 +62,9 @@ vnoremap <D-/> :TComment<CR>
 
 Bundle 'Lokaltog/vim-easymotion'
 let g:EasyMotion_leader_key='<localleader>'
+
+" vim-vroom
+Bundle 'skalnik/vim-vroom'
+let g:vroom_map_keys = 0
+map <leader>f :VroomRunTestFile<CR>
+map <leader>F :VroomRunNearestTest<CR>
