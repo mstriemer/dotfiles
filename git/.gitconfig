@@ -6,6 +6,9 @@
     st = status
     br = branch
     co = checkout
+    di = diff
+    dc = diff --cached
+    aa = add --all
 [color]
     ui = auto
 [color "branch"]
