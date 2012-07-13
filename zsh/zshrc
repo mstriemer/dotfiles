@@ -34,6 +34,8 @@ plugins=(git github rails rails3 vi-mode brew rvm bundler)
 source $ZSH/oh-my-zsh.sh
 
 export PATH=/usr/local/bin:$PATH
+export EDITOR=vim
+export GIT_EDITOR=vim
 
 set -o vi
 
