@@ -32,6 +32,12 @@ set incsearch
 set ignorecase
 set smartcase
 
+" No arrow keys!
+map <Left> :echo "STOP IT!"<cr>
+map <Right> :echo "STOP IT!"<cr>
+map <Down> :echo "STOP IT!"<cr>
+map <Up> :echo "STOP IT!"<cr>
+
 " Tab completion
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc,env-*/*,*.jpg,*.jpeg,*.gif,*.png,*.zip
@@ -86,7 +92,7 @@ nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
 " Clear search
-nmap <silent> <leader>/ :nohlsearch<CR>
+nmap <silent> <cr> :nohlsearch<CR>
 " Allow :w!! to sudo save
 cmap w!! w !sudo tee % >/dev/null
 " Vimrc management
