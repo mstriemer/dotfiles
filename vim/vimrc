@@ -105,5 +105,5 @@ nnoremap <leader>rd :e ~/.vim/ <CR>
 nnoremap <M-h> :tabprev<CR>
 nnoremap <M-l> :tabnext<CR>
 " Esc
-inoremap <leader>, <Esc>
+map ,, <C-^>
 inoremap ;; <Esc>
