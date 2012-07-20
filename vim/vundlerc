@@ -21,7 +21,6 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'lunaru/vim-less'
 Bundle 'juvenn/mustache.vim'
 Bundle 'tpope/vim-surround'
-Bundle 'skalnik/vim-vroom'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
