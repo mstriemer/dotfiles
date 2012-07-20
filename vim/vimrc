@@ -1,5 +1,4 @@
 set shell=bash
-set colorcolumn=80,100
 set relativenumber
 set ruler
 syntax on
@@ -55,6 +54,8 @@ endif
 " Highlight the current line
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
+autocmd WinEnter * setlocal colorcolumn=80,100
+autocmd WinLeave * setlocal colorcolumn=
 
 " Set HTML as HTML-Django
 au BufRead,BufNewFile *.html set ft=htmldjango
