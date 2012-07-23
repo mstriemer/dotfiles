@@ -43,7 +43,6 @@ filetype plugin indent on     " required!
 " Command-T configuration
 Bundle 'git://git.wincent.com/command-t.git'
 let g:CommandTMaxHeight=20
-let g:CommandTCancelMap=['<ESC>','<C-c>']
 nnoremap <Leader>f :CommandT<CR>
 " Flush CommandT when coming back to vim or writing a file
 au FocusGained,BufWrite * CommandTFlush
