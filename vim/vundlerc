@@ -44,7 +44,7 @@ filetype plugin indent on     " required!
 Bundle 'git://git.wincent.com/command-t.git'
 let g:CommandTMaxHeight=20
 let g:CommandTCancelMap=['<ESC>','<C-c>']
-nnoremap <Leader>t :CommandT<CR>
+nnoremap <Leader>f :CommandT<CR>
 " Flush CommandT when coming back to vim or writing a file
 au FocusGained,BufWrite * CommandTFlush
 
@@ -66,5 +66,5 @@ let g:EasyMotion_leader_key='<localleader>'
 " vim-vroom
 Bundle 'skalnik/vim-vroom'
 let g:vroom_map_keys = 0
-map <leader>f :VroomRunTestFile<CR>
-map <leader>F :VroomRunNearestTest<CR>
+map <leader>t :VroomRunTestFile<CR>
+map <leader>T :VroomRunNearestTest<CR>
