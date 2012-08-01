@@ -51,3 +51,12 @@ fi
 
 # Customize to your needs...
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+function workon {
+    if [[ $1 == "." ]]; then
+        env_name=${PWD##*/}
+    else
+        env_name=$1
+    fi
+    source $HOME/.virtualenvs/$env_name/bin/activate
+}
