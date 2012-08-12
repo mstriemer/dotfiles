@@ -13,4 +13,4 @@ alias bl="bundle list"
 alias bp="bundle package"
 alias bu="bundle update"
 
-alias workit="workon ."
+alias workonit="workon ."
