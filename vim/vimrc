@@ -92,19 +92,24 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+" Tabs
+nmap <silent> <C-w>[ :tabp<cr>
+nmap <silent> <C-w>] :tabn<cr>
+nmap <silent> <C-[> :tabp<cr>
+nmap <silent> <C-]> :tabn<cr>
+
 " Clear search
 nmap <silent> <cr> :nohlsearch<CR>
+
 " Allow :w!! to sudo save
 cmap w!! w !sudo tee % >/dev/null
+
 " Vimrc management
 nnoremap <leader>rs :source ~/.vimrc<CR>
 nnoremap <leader>rt :tabnew ~/.vim/vimrc<CR>
 nnoremap <leader>re :e ~/.vim/vimrc<CR>
 nnoremap <leader>rd :e ~/.vim/ <CR>
 
-" Tabs
-nnoremap <M-h> :tabprev<CR>
-nnoremap <M-l> :tabnext<CR>
 " Esc
 map ,, <C-^>
 inoremap ;; <Esc>
