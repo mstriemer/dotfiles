@@ -80,8 +80,8 @@ noremap <leader>y "*y
 noremap <leader>yy "*Y
 
 " Directories for swp files
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
+set backupdir=~/.dotfiles/vim/backup
+set directory=~/.dotfiles/vim/backup
 
 " Show (partial) command in the status line
 set showcmd
@@ -104,9 +104,9 @@ cmap w!! w !sudo tee % >/dev/null
 
 " Vimrc management
 nnoremap <leader>rs :source ~/.vimrc<CR>
-nnoremap <leader>rt :tabnew ~/.vim/vimrc<CR>
-nnoremap <leader>re :e ~/.vim/vimrc<CR>
-nnoremap <leader>rd :e ~/.vim/ <CR>
+nnoremap <leader>rt :tabnew ~/.dotfiles/vim/vimrc<CR>
+nnoremap <leader>re :e ~/.dotfiles/vim/vimrc<CR>
+nnoremap <leader>rd :e ~/.dotfiles/vim/ <CR>
 
 " Esc
 map ,, <C-^>

@@ -1,15 +1,15 @@
-if filereadable(expand("~/.vim/vundlerc"))
-  source ~/.vim/vundlerc
+if filereadable(expand("~/.dotfiles/vim/vundlerc"))
+  source ~/.dotfiles/vim/vundlerc
 endif
 
-if filereadable(expand("~/.vim/vimrc"))
-  source ~/.vim/vimrc
+if filereadable(expand("~/.dotfiles/vim/vimrc"))
+  source ~/.dotfiles/vim/vimrc
 endif
 
-if has("gui_running") && filereadable(expand("~/.vim/gvimrc"))
-  source ~/.vim/gvimrc
+if has("gui_running") && filereadable(expand("~/.dotfiles/vim/gvimrc"))
+  source ~/.dotfiles/vim/gvimrc
 endif
 
-if filereadable(expand("~/.vim/vimrc.local"))
-  source ~/.vim/vimrc.local
+if filereadable(expand("~/.dotfiles/vim/vimrc.local"))
+  source ~/.dotfiles/vim/vimrc.local
 endif

@@ -3,7 +3,7 @@ filetype off
 let mapleader = ','
 let maplocalleader = '\'
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.dotfiles/vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -24,7 +24,7 @@ Bundle 'tpope/vim-surround'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-Bundle 'vim-slim'
+Bundle 'bbommarito/vim-slim'
 " Bundle 'rails.vim'
 " non github repos
 " ...
@@ -40,17 +40,14 @@ filetype plugin indent on     " required!
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
 
-" Command-T configuration
-Bundle 'git://git.wincent.com/command-t.git'
-let g:CommandTMaxHeight=20
-nnoremap <Leader>f :CommandT<CR>
-" Flush CommandT when coming back to vim or writing a file
-au FocusGained,BufWrite * CommandTFlush
-
 " Enable syntastic syntax checking
 Bundle 'scrooloose/syntastic'
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
+
+Bundle 'kien/ctrlp.vim'
+nnoremap <leader>f :CtrlP<cr>
+au FocusGained,BufWrite * CtrlPFlushCache
 
 Bundle 'tlib'
 Bundle 'tComment'
