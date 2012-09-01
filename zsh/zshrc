@@ -39,10 +39,6 @@ export GIT_EDITOR=vim
 
 set -o vi
 
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
-fi
-
 . ~/.dotfiles/zsh/aliases.zsh
 
 if [[ -a ~/.dotfiles/zsh/local.zsh ]]; then
