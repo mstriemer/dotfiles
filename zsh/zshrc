@@ -56,3 +56,9 @@ function workon {
     fi
     source $HOME/.virtualenvs/$env_name/bin/activate
 }
+
+function workonthis {
+    env_name=$HOME/.virtualenvs/${PWD##*/}
+    virtualenv $env_name
+    workon .
+}
