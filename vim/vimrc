@@ -93,8 +93,8 @@ nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
 " Tabs
-nmap <silent> <C-w>[ :tabp<cr>
-nmap <silent> <C-w>] :tabn<cr>
+nnoremap <C-w><left> :tabp<cr>
+nnoremap <C-w><right> :tabn<cr>
 
 " Clear search
 nmap <silent> <cr> :nohlsearch<CR>
