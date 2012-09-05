@@ -59,6 +59,6 @@ function workon {
 
 function workonthis {
     env_name=$HOME/.virtualenvs/${PWD##*/}
-    virtualenv $env_name
+    virtualenv $* $env_name
     workon .
 }
