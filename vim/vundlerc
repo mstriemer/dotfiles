@@ -25,6 +25,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'bbommarito/vim-slim'
+Bundle 'Lokaltog/vim-powerline'
 " Bundle 'rails.vim'
 " non github repos
 " ...
