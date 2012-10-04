@@ -44,7 +44,9 @@ set laststatus=2
 " Highlight the current line
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
-autocmd WinEnter * setlocal colorcolumn=80,100
+autocmd BufRead,BufNewFile * setlocal cursorline
+autocmd WinEnter * setlocal colorcolumn=80
+autocmd BufRead,BufNewFile * setlocal colorcolumn=80
 autocmd WinLeave * setlocal colorcolumn=
 
 " Set HTML as HTML-Django
