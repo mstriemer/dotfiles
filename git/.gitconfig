@@ -15,3 +15,27 @@
 [core]
     excludesfile = /Users/Mark/.gitignore
     editor = /usr/bin/vim
+[url "http://github.com/"]
+    insteadOf = "gh:"
+[url "git@github.com:"]
+    pushInsteadOf = "https://github.com/"
+    pushInsteadOf = "http://github.com/"
+    pushInsteadOf = "gh:"
+[url "http://github.com/mstriemer/"]
+    insteadOf = "ms:"
+[url "git@github.com:mstriemer/"]
+    pushInsteadOf = "https://github.com/mstriemer/"
+    pushInsteadOf = "http://github.com/mstriemer/"
+    pushInsteadOf = "ms:"
+[url "http://bitbucket.org/"]
+    insteadOf = "bb:"
+[url "git@bitbucket.org:"]
+    pushInsteadOf = "https://bitbucket.org/"
+    pushInsteadOf = "http://bitbucket.org/"
+    pushInsteadOf = "bb:"
+[url "http://bitbucket.org/mstriemer/"]
+    insteadOf = "bbms:"
+[url "git@bitbucket.org:"]
+    pushInsteadOf = "https://bitbucket.org/mstriemer/"
+    pushInsteadOf = "http://bitbucket.org/mstriemer/"
+    pushInsteadOf = "bbms:"
