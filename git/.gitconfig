@@ -35,7 +35,7 @@
     pushInsteadOf = "bb:"
 [url "http://bitbucket.org/mstriemer/"]
     insteadOf = "bbms:"
-[url "git@bitbucket.org:"]
+[url "git@bitbucket.org:mstriemer/"]
     pushInsteadOf = "https://bitbucket.org/mstriemer/"
     pushInsteadOf = "http://bitbucket.org/mstriemer/"
     pushInsteadOf = "bbms:"
