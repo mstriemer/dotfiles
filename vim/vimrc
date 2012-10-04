@@ -84,15 +84,8 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-" Tabs
-nnoremap <C-w><left> :tabp<cr>
-nnoremap <C-w><right> :tabn<cr>
-
 " Clear search
 nmap <silent> <cr> :nohlsearch<CR>
-
-" Allow :w!! to sudo save
-cmap w!! w !sudo tee % >/dev/null
 
 " Vimrc management
 nnoremap <leader>rs :source ~/.vimrc<CR>
@@ -100,6 +93,4 @@ nnoremap <leader>rt :tabnew ~/.dotfiles/vim/vimrc<CR>
 nnoremap <leader>re :e ~/.dotfiles/vim/vimrc<CR>
 nnoremap <leader>rd :e ~/.dotfiles/vim/ <CR>
 
-" Esc
 map ,, <C-^>
-inoremap ;; <Esc>
