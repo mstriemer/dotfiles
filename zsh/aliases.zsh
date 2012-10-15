@@ -14,3 +14,5 @@ alias bp="bundle package"
 alias bu="bundle update"
 
 alias workonit="workon ."
+
+alias ackall="ack -a --ignore-dir={log,coverage,doc,tmp,vendor}"
