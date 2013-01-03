@@ -3,7 +3,7 @@ set relativenumber
 set ruler
 syntax on
 colorscheme solarized
-set background=dark
+set background=light
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colours
 
 " Set encoding

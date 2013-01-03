@@ -27,7 +27,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'bbommarito/vim-slim'
 Bundle 'Lokaltog/vim-powerline'
-" Bundle 'rails.vim'
+Bundle 'tpope/vim-rails'
 " non github repos
 " ...
 
@@ -49,6 +49,7 @@ let g:syntastic_quiet_warnings=1
 
 Bundle 'kien/ctrlp.vim'
 nnoremap <leader>f :CtrlP<cr>
+let g:ctrlp_max_files = 20000
 
 Bundle 'tlib'
 Bundle 'tComment'
