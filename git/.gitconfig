@@ -13,7 +13,7 @@
 [color]
     ui = auto
 [core]
-    excludesfile = /Users/Mark/.gitignore
+    excludesfile = ~/.gitignore
     editor = /usr/bin/vim
 [url "https://github.com/"]
     insteadOf = "gh:"
