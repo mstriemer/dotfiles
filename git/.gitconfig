@@ -38,3 +38,5 @@
     pushInsteadOf = "http://bitbucket.org/mstriemer/"
     pushInsteadOf = "bbms:"
     insteadOf = "bbms:"
+[push]
+	default = current
