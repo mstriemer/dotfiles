@@ -39,4 +39,4 @@
     pushInsteadOf = "bbms:"
     insteadOf = "bbms:"
 [push]
-	default = current
+    default = current
