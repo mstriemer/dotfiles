@@ -13,6 +13,21 @@ alias bl="bundle list"
 alias bp="bundle package"
 alias bu="bundle update"
 
-alias workonit="workon ."
-
 alias ackall="ack -a --ignore-dir={log,coverage,doc,tmp,vendor}"
+
+function workon {
+    if [[ $1 == "." ]]; then
+        env_name=${PWD##*/}
+    else
+        env_name=$1
+    fi
+    source $HOME/.virtualenvs/$env_name/bin/activate
+}
+
+function workonthis {
+    env_name=$HOME/.virtualenvs/${PWD##*/}
+    virtualenv $* $env_name
+    workon .
+}
+
+alias workonit="workon ."
