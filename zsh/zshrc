@@ -40,6 +40,7 @@ export GIT_EDITOR=vim
 set -o vi
 
 . ~/.dotfiles/zsh/aliases.zsh
+. ~/.dotfiles/zsh/funcs.zsh
 
 if [[ -a ~/.dotfiles/zsh/local.zsh ]]; then
   . ~/.dotfiles/zsh/local.zsh
