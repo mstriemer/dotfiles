@@ -49,7 +49,7 @@ let g:syntastic_quiet_warnings=1
 
 Bundle 'kien/ctrlp.vim'
 nnoremap <leader>f :CtrlP<cr>
-let g:ctrlp_max_files = 20000
+let g:ctrlp_max_files = 30000
 
 Bundle 'tlib'
 Bundle 'tComment'
