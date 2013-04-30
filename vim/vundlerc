@@ -22,12 +22,15 @@ Bundle 'lunaru/vim-less'
 Bundle 'juvenn/mustache.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'airblade/vim-gitgutter'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'bbommarito/vim-slim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-rails'
+Bundle 'rake.vim'
+Bundle 'bundler.vim'
 " non github repos
 " ...
 

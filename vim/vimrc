@@ -1,5 +1,4 @@
 set shell=bash
-set relativenumber
 set ruler
 syntax on
 colorscheme solarized
