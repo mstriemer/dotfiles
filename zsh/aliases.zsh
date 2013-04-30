@@ -16,3 +16,5 @@ alias bu="bundle update"
 alias ackall="ack -a --ignore-dir={log,coverage,doc,tmp,vendor}"
 
 alias workonit="workon ."
+
+alias .git="git --work-tree=$HOME/.dotfiles/ --git-dir=$HOME/.dotfiles/.git"
