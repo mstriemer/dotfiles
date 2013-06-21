@@ -45,6 +45,3 @@ export GIT_EDITOR=vim
 if [[ -a ~/.dotfiles/zsh/local.zsh ]]; then
   . ~/.dotfiles/zsh/local.zsh
 fi
-
-# Customize to your needs...
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

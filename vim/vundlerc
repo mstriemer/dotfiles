@@ -26,11 +26,16 @@ Bundle 'airblade/vim-gitgutter'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle "lepture/vim-jinja"
 Bundle 'bbommarito/vim-slim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-rails'
 Bundle 'rake.vim'
 Bundle 'bundler.vim'
+
+" Python
+Bundle 'pep8'
+
 " non github repos
 " ...
 

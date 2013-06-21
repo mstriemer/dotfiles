@@ -9,7 +9,7 @@ function workon {
 
 function workonthis {
     env_name=$HOME/.virtualenvs/${PWD##*/}
-    virtualenv $* $env_name
+    python -m virtualenv $* $env_name
     workon .
 }
 
