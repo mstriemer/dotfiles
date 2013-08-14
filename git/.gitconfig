@@ -40,3 +40,10 @@
     insteadOf = "bbms:"
 [push]
     default = current
+[diff]
+    tool = vimdiff
+[merge]
+    tool = vimdiff
+[mergetool "vimdiff"]
+    cmd="vimdiff -d -c 'wincmd J'  $MERGED $LOCAL $BASE $REMOTE"
+    keepbackup=false
