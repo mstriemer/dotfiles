@@ -35,7 +35,7 @@ map <Up> :echo "STOP IT!"<cr>
 
 " Tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc,env-*/*,*.jpg,*.jpeg,*.gif,*.png,*.zip
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc,env-*/*,*.jpg,*.jpeg,*.gif,*.png,*.zip,*/coverage
 
 " Status bar
 set laststatus=2
