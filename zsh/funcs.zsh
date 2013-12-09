@@ -13,6 +13,11 @@ function workonthis {
     workon .
 }
 
+function a {
+    workon .
+    export PATH=$(pwd)/node_modules/.bin:$PATH
+}
+
 function rubyit {
   chruby `cat .ruby-version`
   export RUBYIT_PATH=`pwd`/bin
