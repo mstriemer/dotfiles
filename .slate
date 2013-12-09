@@ -51,7 +51,7 @@ bind space:${leader}  move ${fullscreen}
 
 # Push Bindings
 bind l:${leader}  push right bar-resize:(screenSizeX/100)*62.35
-bind h:${leader}  push left  bar-resize:(screenSizeX/100)*38.5
+bind h:${leader}  push left  bar-resize:(screenSizeX/100)*40
 bind k:${leader}  push up    bar-resize:screenSizeY/2
 bind j:${leader}  push down  bar-resize:screenSizeY/2
 bind right:${leader} push right
