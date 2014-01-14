@@ -16,3 +16,16 @@ alias bu="bundle update"
 alias ackall="ack -a --ignore-dir={log,coverage,doc,tmp,vendor}"
 
 alias .git="git --work-tree=$HOME/.dotfiles/ --git-dir=$HOME/.dotfiles/.git"
+
+alias ls="ls -G"
+alias ll="ls -al"
+
+# zamboni
+alias mkt="./manage.py --settings=settings_local_mkt"
+alias mkt_test='mkt test --logging-clear-handlers --nocapture --noinput'
+alias mkt_test_api='mkt_test --config=mkt/api/tests/nose.cfg'
+alias amo="./manage.py --settings=settings_local_amo"
+alias amo_test='amo test --logging-clear-handlers --nocapture --noinput'
+alias amo_test_api='amo_test --config=mkt/api/tests/nose.cfg'
+
+alias json-pretty="python -mjson.tool"
