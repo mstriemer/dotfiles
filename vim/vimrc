@@ -1,6 +1,7 @@
 set shell=bash
 set ruler
 syntax on
+let g:solarized_termcolors=256
 colorscheme solarized
 set background=light
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colours
