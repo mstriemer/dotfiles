@@ -27,6 +27,12 @@
     pushInsteadOf = "https://github.com/mstriemer/"
     pushInsteadOf = "http://github.com/mstriemer/"
     pushInsteadOf = "ms:"
+[url "https://github.com/mozilla/"]
+    insteadOf = "moz:"
+[url "git@github.com:mozilla/"]
+    pushInsteadOf = "https://github.com/mozilla/"
+    pushInsteadOf = "http://github.com/mozilla/"
+    pushInsteadOf = "moz:"
 [url "https://bitbucket.org/"]
     insteadOf = "bb:"
 [url "git@bitbucket.org:"]
