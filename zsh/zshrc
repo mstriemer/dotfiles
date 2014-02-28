@@ -1,17 +1,11 @@
-set -o emacs
-
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export EDITOR=vim
 export GIT_EDITOR=vim
 
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-autoload -Uz compinit && compinit
-fpath=(/usr/local/share/zsh/site-functions $fpath)
-
-. ~/.dotfiles/zsh/theme.zsh
 . ~/.dotfiles/zsh/aliases.zsh
 . ~/.dotfiles/zsh/funcs.zsh
 
 if [[ -a ~/.dotfiles/zsh/local.zsh ]]; then
   . ~/.dotfiles/zsh/local.zsh
 fi
+
+alias rm="rm" # Apparently someone decided to be helpful and make this `rm -i`.
