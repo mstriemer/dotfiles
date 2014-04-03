@@ -1,20 +1,34 @@
+function dir_venv_name {
+    echo ${PWD##*/}
+}
+
+function venv {
+    echo $HOME/.virtualenvs/$1
+}
+
+function dir_venv {
+    venv $(dir_venv_name)
+}
+
 function workon {
     if [[ $1 == "." ]]; then
-        env_name=${PWD##*/}
+        env_name=$(dir_venv_name)
     else
         env_name=$1
     fi
-    source $HOME/.virtualenvs/$env_name/bin/activate
+    source $(venv $env_name)/bin/activate
 }
 
 function workonthis {
     env_name=$HOME/.virtualenvs/${PWD##*/}
-    python -m virtualenv $* $env_name
+    python -m virtualenv $* $(dir_venv)
     workon .
 }
 
 function a {
-    workon .
+    if [[ -d $(dir_venv) ]]; then
+        workon .
+    fi
     export PATH=$(pwd)/node_modules/.bin:$PATH
 }
 
