@@ -54,3 +54,10 @@ function rubyinstall {
   echo "$ruby is already installed" && return 2
 }
 
+function npm-exec {
+    node_modules/.bin/$*
+}
+
+curl-json () {
+    curl --silent $@ | python -m json.tool
+}
