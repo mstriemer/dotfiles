@@ -30,6 +30,9 @@ function a {
         workon .
     fi
     export PATH=$(pwd)/node_modules/.bin:$PATH
+    if [[ -e env.sh ]]; then
+        source env.sh
+    fi
 }
 
 function rubyit {
