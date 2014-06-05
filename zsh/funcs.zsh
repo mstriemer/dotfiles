@@ -64,3 +64,12 @@ function npm-exec {
 curl-json () {
     curl --silent $@ | python -m json.tool
 }
+
+bug () {
+    if (( $# == 0 )); then
+        bug_id=$(git branch | grep '*' | python -c "print(raw_input().split('-')[-1])")
+    else
+        bug_id=$1
+    fi
+    open "https://bugzilla.mozilla.org/buglist.cgi?quicksearch=$bug_id"
+}
