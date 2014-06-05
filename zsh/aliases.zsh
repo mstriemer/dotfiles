@@ -27,7 +27,7 @@ alias dj="./manage.py"
 alias mkt="./manage.py --settings=settings_local_mkt"
 alias mkt_test='mkt test --logging-clear-handlers --nocapture --noinput'
 alias mkt_test_api='mkt_test --config=mkt/api/tests/nose.cfg'
-alias amo="./manage.py --settings=settings_local_amo"
+alias amo="./manage.py"
 alias amo_test='amo test --logging-clear-handlers --nocapture --noinput'
 alias amo_test_api='amo_test --config=mkt/api/tests/nose.cfg'
 
