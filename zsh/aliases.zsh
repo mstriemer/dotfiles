@@ -21,6 +21,8 @@ alias .git="git --work-tree=$HOME/.dotfiles/ --git-dir=$HOME/.dotfiles/.git"
 alias ls="ls -G"
 alias ll="ls -al"
 
+alias dj="./manage.py"
+
 # zamboni
 alias mkt="./manage.py --settings=settings_local_mkt"
 alias mkt_test='mkt test --logging-clear-handlers --nocapture --noinput'
