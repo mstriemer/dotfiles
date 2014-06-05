@@ -10,3 +10,6 @@ if [[ -a ~/.dotfiles/zsh/local.zsh ]]; then
 fi
 
 alias rm="rm" # Apparently someone decided to be helpful and make this `rm -i`.
+
+# Don't logout on ctrl-d.
+setopt IGNORE_EOF
