@@ -5,7 +5,7 @@ alias r="rails"
 alias pi="pip install"
 alias pr="pip install -r requirements.txt"
 alias pf='pip freeze -r requirements.txt | grep -v "^#"'
-alias pipc="pip install --no-deps --exists-action=w --download-cache=/tmp/pip-cache"
+alias pipc="pip install --exists-action=w --download-cache=/tmp/pip-cache"
 
 # bundler
 alias be="bundle exec"
