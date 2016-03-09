@@ -74,16 +74,36 @@ bug () {
     open "https://bugzilla.mozilla.org/buglist.cgi?quicksearch=$bug_id"
 }
 
+adb-screenrecord () {
+    FILENAME=/sdcard/$1.mp4
+    adb shell screenrecord $FILENAME &
+    echo "Recording... Ctrl-C to stop recording"
+    RECORD_PID=$!
+    trap 'kill $RECORD_PID' SIGINT
+    while kill -0 $RECORD_PID > /dev/null 2>&1
+    do
+        wait $RECORD_PID
+        sleep 2
+        adb pull $FILENAME
+    done
+}
+
 gifify() {
     if [[ -n "$1" ]]; then
-        if [[ $2 == '--good' ]]; then
-            ffmpeg -i $1 -r 10 -vcodec png out-static-%05d.png
-            time convert -verbose +dither -layers Optimize -resize 600x600\> out-static*.png  GIF:- | gifsicle --colors 128 --delay=5 --loop --optimize=3 --multifile - >! $1.gif
-            rm -f out-static*.png
-        else
-            ffmpeg -i $1 -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 >! $1.gif
-        fi
+        ffmpeg -i $1 -r 20 -vcodec png out-static-%05d.png
+        time convert -verbose +dither -layers Optimize -resize 600x600\> out-static*.png  GIF:- | gifsicle --colors 128 --delay=5 --loop --optimize=3 --multifile - >! $1.gif
+        rm -f out-static*.png
     else
         echo "proper usage: gifify <input_movie.mov>. You DO need to include extension."
+    fi
+}
+
+code () {
+    if [[ $# = 0 ]]
+    then
+        open -a "Visual Studio Code"
+    else
+        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
+        open -a "Visual Studio Code" --args "$F"
     fi
 }

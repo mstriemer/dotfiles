@@ -36,7 +36,7 @@ map <Up> :echo "STOP IT!"<cr>
 
 " Tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc,env-*/*,*.jpg,*.jpeg,*.gif,*.png,*.zip,*/coverage,dist,node_modules
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc,env-*/*,*.jpg,*.jpeg,*.gif,*.png,*.zip,*/coverage,node_modules,cache,*.styl.css,*.orig,bower_components
 
 " Status bar
 set laststatus=2
@@ -45,12 +45,9 @@ set laststatus=2
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 autocmd BufRead,BufNewFile * setlocal cursorline
-autocmd WinEnter * setlocal colorcolumn=80
-autocmd BufRead,BufNewFile * setlocal colorcolumn=80
-autocmd WinLeave * setlocal colorcolumn=
 
 " Set HTML as HTML-Django
-au BufRead,BufNewFile *.html set ft=htmldjango
+" au BufRead,BufNewFile *.html set ft=htmldjango
 
 " vundlerc is a vim file
 au BufRead,BufNewFile vundlerc set ft=vim

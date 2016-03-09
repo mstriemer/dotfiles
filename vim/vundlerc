@@ -24,11 +24,12 @@ Bundle 'juvenn/mustache.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'lepture/vim-jinja'
+Bundle 'Lokaltog/vim-powerline'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-Bundle "lepture/vim-jinja"
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'pythoncomplete'
 
 " Python
 Bundle 'pep8'
@@ -50,6 +51,7 @@ filetype plugin indent on     " required!
 " Enable syntastic syntax checking
 Bundle 'scrooloose/syntastic'
 let g:syntastic_check_on_open = 1
+let g:syntastic_javascript_checkers = ['./node_modules/.bin/eslint']
 
 Bundle 'kien/ctrlp.vim'
 nnoremap <leader>f :CtrlP<cr>

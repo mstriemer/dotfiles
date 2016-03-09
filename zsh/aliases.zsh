@@ -4,7 +4,7 @@ alias r="rails"
 # pip
 alias pi="pip install"
 alias pr="pip install -r requirements.txt"
-alias pf='pip freeze -r requirements.txt | grep -v "^#"'
+alias pipf='pip freeze -r requirements.txt | grep -v "^#"'
 alias pipc="pip install --exists-action=w --download-cache=/tmp/pip-cache"
 
 # bundler
@@ -21,14 +21,17 @@ alias .git="git --work-tree=$HOME/.dotfiles/ --git-dir=$HOME/.dotfiles/.git"
 alias ls="ls -G"
 alias ll="ls -al"
 
-alias dj="./manage.py"
-
-# zamboni
-alias mkt="./manage.py --settings=settings_local_mkt"
-alias mkt_test='mkt test --logging-clear-handlers --nocapture --noinput'
-alias mkt_test_api='mkt_test --config=mkt/api/tests/nose.cfg'
-alias amo="./manage.py"
-alias amo_test='amo test --logging-clear-handlers --nocapture --noinput'
-alias amo_test_api='amo_test --config=mkt/api/tests/nose.cfg'
+alias dj="python manage.py"
+alias dj_test='REUSE_DB=1 python manage.py test --logging-clear-handlers --nocapture --noinput'
 
 alias json-pretty="python -mjson.tool"
+
+alias mutt="TERM=xterm-256color mutt"
+
+alias mkt-fig="FIG_FILE=~/.mkt.fig.yml FIG_PROJECT_NAME=mkt fig"
+
+alias fx18="/Applications/Firefox-18.app/Contents/MacOS/firefox-bin -P 'Firefox 18'"
+alias firefox18="/Applications/Firefox-18.app/Contents/MacOS/firefox-bin -P 'Firefox 18'"
+
+alias vim="nvim"
+# alias git="gh"
