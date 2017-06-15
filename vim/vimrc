@@ -1,7 +1,8 @@
+set mouse=
 set shell=bash
 set ruler
 syntax on
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
 colorscheme solarized
 set background=light
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colours
@@ -46,20 +47,14 @@ autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 autocmd BufRead,BufNewFile * setlocal cursorline
 
-" Set HTML as HTML-Django
-" au BufRead,BufNewFile *.html set ft=htmldjango
-
-" vundlerc is a vim file
-au BufRead,BufNewFile vundlerc set ft=vim
+" Set .jsm as javascript
+au BufNewFile,BufRead *.jsm set filetype=javascript
 
 " Set less filetype
 au BufNewFile,BufRead *.less set filetype=less
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
-
-" add json syntax highlighting
-au BufNewFile,BufRead *.json set ft=javascript
 
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set autoread

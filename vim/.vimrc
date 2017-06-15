@@ -1,5 +1,10 @@
-if filereadable(expand("~/.dotfiles/vim/vundlerc"))
-  source ~/.dotfiles/vim/vundlerc
+set nocompatible               " be iMproved
+filetype off
+let mapleader = ','
+let maplocalleader = '\'
+
+if filereadable(expand("~/.dotfiles/vim/plugfile.vim"))
+  source ~/.dotfiles/vim/plugfile.vim
 endif
 
 if filereadable(expand("~/.dotfiles/vim/vimrc"))
