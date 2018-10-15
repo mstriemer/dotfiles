@@ -1,6 +1,7 @@
 set mouse=
 set shell=bash
 set ruler
+set hidden
 syntax on
 " let g:solarized_termcolors=256
 colorscheme solarized
@@ -55,6 +56,9 @@ au BufNewFile,BufRead *.less set filetype=less
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+
+" Set pico8 fieltype to lua
+au BufRead,BufNewFile *.p8 set ft=lua
 
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set autoread
