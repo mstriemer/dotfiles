@@ -2,12 +2,16 @@ call plug#begin('~/.vim/plugged')
 " Plugins go below this.
 
 Plug 'w0rp/ale'
+nnoremap <leader>. :ALEFix<cr>
+
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'machakann/vim-highlightedyank'
+Plug 'prettier/vim-prettier'
 
 " nvim-completion-manager is a bit annoying cause it steals enter key presses.
 " Plug 'roxma/nvim-completion-manager'

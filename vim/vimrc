@@ -66,6 +66,8 @@ set autoread
 " Yank to the OS X clipboard
 noremap <leader>y "*y
 noremap <leader>Y "*Y
+noremap <leader>p "*p
+noremap <leader>P "*P
 
 " Directories for swp files
 set backupdir=~/.dotfiles/vim/backup
