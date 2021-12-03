@@ -4,6 +4,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'w0rp/ale'
 nnoremap <leader>. :ALEFix<cr>
 
+let g:ale_fixers = {
+\   'javascript': [
+\       'prettier',
+\   ],
+\}
+
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -18,7 +24,7 @@ Plug 'prettier/vim-prettier'
 " Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
 Plug 'ervandew/supertab'
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf'
 function! s:buflist()
   redir => ls
   silent ls
