@@ -57,3 +57,5 @@
     keepbackup=false
 [cinnabar]
 	helper = /usr/local/Cellar/git-cinnabar/0.4.0_1/libexec/git-cinnabar-helper
+[init]
+	defaultBranch = main

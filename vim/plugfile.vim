@@ -6,8 +6,11 @@ nnoremap <leader>. :ALEFix<cr>
 
 let g:ale_fixers = {
 \   'javascript': [
-\       'prettier',
+\     'prettier',
 \   ],
+\  'python': [
+\     'black',
+\  ],
 \}
 
 Plug 'altercation/vim-colors-solarized'
@@ -19,31 +22,24 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'machakann/vim-highlightedyank'
 Plug 'prettier/vim-prettier'
 
+Plug 'jonsmithers/vim-html-template-literals'
+" , { 'branch': 'dev' }
+Plug 'pangloss/vim-javascript'
+
+let g:htl_css_templates = 1
+
 " nvim-completion-manager is a bit annoying cause it steals enter key presses.
 " Plug 'roxma/nvim-completion-manager'
 " Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
 Plug 'ervandew/supertab'
 
-Plug 'junegunn/fzf'
-function! s:buflist()
-  redir => ls
-  silent ls
-  redir END
-  return split(ls, '\n')
-endfunction
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+set rtp+=/opt/homebrew/opt/fzf
+let g:fzf_preview_window = ['hidden,right,50%', 'ctrl-]']
 
-function! s:bufopen(e)
-  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
-endfunction
-
-nnoremap <leader>f :FZF<cr>
-nnoremap <silent> <leader>d :call fzf#run({
-\   'source':  reverse(<sid>buflist()),
-\   'sink':    function('<sid>bufopen'),
-\   'options': '+m',
-\   'down':    len(<sid>buflist()) + 2
-\ })<CR>
-" nnoremap <leader>d :ls<cr>:b<space>
+nnoremap <leader>f :Files<cr>
+nnoremap <leader>d :Buffers<cr>
 
 Plug 'vim-scripts/tComment'
 nnoremap // :TComment<CR>

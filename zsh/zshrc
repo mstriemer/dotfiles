@@ -2,6 +2,8 @@ export EDITOR=vim
 export VISUAL=vim
 export GIT_EDITOR=vim
 
+export FZF_DEFAULT_COMMAND 'rg --files --follow --glob "" --ignore-file ~/.ignore -.'
+
 . ~/.dotfiles/zsh/aliases.zsh
 . ~/.dotfiles/zsh/funcs.zsh
 

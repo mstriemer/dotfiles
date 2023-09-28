@@ -86,12 +86,12 @@ nmap <C-l> <C-w>l
 nmap <silent> <cr> :nohlsearch<CR>
 
 " Vimrc management
-nnoremap <leader>rs :source ~/.vimrc<CR>
+nnoremap <leader>rs :source ~/.dotfiles/vim/vimrc<CR>
 nnoremap <leader>rt :tabnew ~/.dotfiles/vim/vimrc<CR>
 nnoremap <leader>re :e ~/.dotfiles/vim/vimrc<CR>
 nnoremap <leader>rd :e ~/.dotfiles/vim/ <CR>
 
-map ,, <C-^>
+map <leader><leader> <C-^>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RUNNING TESTS
